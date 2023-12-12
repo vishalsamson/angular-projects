@@ -1,0 +1,32 @@
+<table style="width: 100%; height: 100%;">
+    <tr>
+      <td>
+        <div>
+          <h1>Login Page</h1><br>
+          <label for="username">User Name - </label>
+          <input type="text" id="username" name="username" #username>
+          <br><br>
+          <label for="password">Password - </label>
+          <input type="text" id="password" name="password" #password>
+          <br><br>
+          <button (click)="login(username.value,password.value)">Login</button>
+        </div>
+      </td>
+      <td>
+        <div *ngIf="isAdmin">
+          <app-admin></app-admin>
+        </div>
+        <div *ngIf="isStudent">
+          <app-student></app-student>
+        </div> 
+      </td>
+    </tr>
+</table>
+
+<hr>
+ Click Count {{clickCount}}
+<hr>
+<app-temp (send)="getCount($event)"></app-temp>
+<hr>
+<br>
+<app-test></app-test>

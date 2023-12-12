@@ -1,0 +1,7 @@
+<h1>Student Page</h1>
+<label for="category">Select Category</label>
+<select (change)="filterByCategory(category.value)" #category>
+    <option selected="false">Select Category</option>
+    <option value="Tech">Tech</option>
+    <option value="Non-Tech">Non-Tech</option>
+</select>
